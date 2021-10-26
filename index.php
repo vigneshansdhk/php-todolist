@@ -34,11 +34,11 @@
 <form action="insert.php" method ="post">
 <div id="myDIV" class="header">
   <h2 style="margin:5px">Todo List</h2>
-  <input type="text" name ="username">  
+  <input type="text" name ="taskname">  
   <button name = "submit" class="addBtn">Add</button>
 </div>
 </form>
-<p class="text-danger">Note : You have Finish Task. After Click Completed CheckBox (or) You have Finish Task. Delete Button Click Permenent Deleted In Database </p>
+<p class="text-danger">Note : You have Finish Task. After Click Completed CheckBox (or) Today You have Finish All Task. Delete Button Click Permenent Deleted In Database </p>
    <div class="container" style="padding:30px 0;">
        <div class="row">
            <div class="col-md-6">
@@ -68,7 +68,7 @@
                             ?>
                             <tr>
                             <td><?php echo $output['id']?> </td>
-                            <td><?php echo $output['username']?></td>
+                            <td><?php echo $output['taskname']?></td>
                             <td><input type="checkbox"></td>
                             <td> <a href="index.php?delete=<?php echo $output['id']; ?>" class = "btn btn-danger btn-sm">Delete</a></td>
                             </tr>

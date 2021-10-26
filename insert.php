@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST['submit'])){
-        $user = $_POST['username'];
+        $user = $_POST['taskname'];
       }
 
       if(!$user){
@@ -10,7 +10,7 @@
 
     }else{
         $connection = mysqli_connect('localhost','root','','todo_list');
-        $insert = "INSERT INTO todos(username)VALUES('$user')";
+        $insert = "INSERT INTO todos(taskname)VALUES('$user')";
         $store = mysqli_query($connection,$insert);
         if($store){
             session_start();
